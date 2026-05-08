@@ -45,6 +45,7 @@ RUN \
 COPY ./entrypoint /entrypoint
 COPY ./install /install
 COPY ./remove /remove
+RUN chmod +x /entrypoint /install /remove
 
 FROM scratch
 COPY --from=rootfs / /
