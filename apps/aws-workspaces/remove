@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+rm -f \ C:\Users\nbucking/.local/share/applications/aws-workspaces.desktop\ \C:\Users\nbucking/.local/share/icons/hicolor/192x192/apps/aws-workspaces.png\ || true
+echo \Removed desktop entry\

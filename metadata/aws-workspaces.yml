@@ -1,0 +1,6 @@
+name: aws-workspaces
+full_name: AWS WorkSpaces Client
+arch:
+  - linux/amd64
+icon: aws-workspaces
+description: AWS WorkSpaces client packaged for PRoot Apps (Ubuntu jammy-based). Installs workspacesclient binary and desktop entry.
