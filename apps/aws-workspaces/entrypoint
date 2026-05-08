@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Start AWS WorkSpaces Client
-workspacesclient --no-sandbox --disable-dev-shm-usage "$@"
+workspacesclient "$@"

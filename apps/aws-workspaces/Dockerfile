@@ -27,6 +27,7 @@ RUN \
   sed -i \
     -e "/^Exec=/c Exec=/bin/sh -c \"\$HOME\/.local\/bin\/proot-apps run ghcr.io/${REPO}:aws-workspaces %U\"" \
     -e "s/Name=Amazon WorkSpaces/Name=AWS WorkSpaces Client PA/g" \
+    -e "/^Icon=/c Icon=aws-workspaces" \
     -e '/^TryExec=/d' \
     /usr/share/applications/com.amazon.workspacesclient.desktop && \
   mv \
