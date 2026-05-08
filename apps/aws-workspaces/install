@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e
-mkdir -p \ C:\Users\nbucking/.local/share/applications\ \C:\Users\nbucking/.local/share/icons/hicolor/192x192/apps\
-cat > \C:\Users\nbucking/.local/share/applications/aws-workspaces.desktop\ <<'DESKTOP'
+
+mkdir -p "$HOME/.local/share/applications" "$HOME/.local/share/icons/hicolor/192x192/apps"
+
+cat > "$HOME/.local/share/applications/aws-workspaces.desktop" <<'DESKTOP'
 [Desktop Entry]
 Name=AWS WorkSpaces Client
 Exec=workspacesclient
@@ -10,4 +12,4 @@ Type=Application
 Categories=Network;RemoteAccess;
 DESKTOP
 
-echo \Installed desktop entry\
+echo "Installed desktop entry"
