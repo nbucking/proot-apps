@@ -14,7 +14,7 @@ PRoot Apps is a simple platform to install and use applications without any priv
 ```
 rm -f $HOME/.local/bin/{ncat,proot-apps,proot,jq}
 mkdir -p $HOME/.local/bin
-curl -L https://github.com/linuxserver/proot-apps/releases/download/$(curl -sX GET "https://api.github.com/repos/linuxserver/proot-apps/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]')/proot-apps-$(uname -m).tar.gz | tar -xzf - -C $HOME/.local/bin/
+curl -L https://github.com/nbucking/proot-apps/releases/download/$(curl -sX GET "https://api.github.com/repos/nbucking/proot-apps/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]')/proot-apps-$(uname -m).tar.gz | tar -xzf - -C $HOME/.local/bin/
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
@@ -57,7 +57,7 @@ The files for Firefox will be installed to a folder in `$HOME/proot-apps/`, Desk
 These short named apps are available from the supported list below, but any app can be consumed from a Docker endpoint IE:
 
 ```
-proot-apps install ghcr.io/linuxserver/proot-apps:firefox
+proot-apps install ghcr.io/nbucking/proot-apps:firefox
 ```
 
 To remove the application:
@@ -79,99 +79,99 @@ proot-apps update firefox
 
 | Name | Full Endpoint | Arch | Description |
 | :----: | :----: | :----: |--- |
-| anydesk | ghcr.io/linuxserver/proot-apps:anydesk | linux/amd64 | AnyDesk ensures secure and reliable remote desktop connections for IT professionals and on-the-go individuals alike.|
-| ardour | ghcr.io/linuxserver/proot-apps:ardour | linux/amd64,linux/arm64 | Ardour is an open source, collaborative effort of a worldwide team including musicians, programmers, and professional recording engineers.|
-| audacity | ghcr.io/linuxserver/proot-apps:audacity | linux/amd64 | Audacity is an easy-to-use, multi-track audio editor and recorder. Developed by a group of volunteers as open source.|
-| beekeeperstudio | ghcr.io/linuxserver/proot-apps:beekeeperstudio | linux/amd64 | Use Beekeeper Studio to query and manage your relational databases, like MySQL, Postgres, SQLite, and SQL Server.|
-| bitwarden | ghcr.io/linuxserver/proot-apps:bitwarden | linux/amd64 | Bitwarden is a secure and free password manager for all of your devices.|
-| blender | ghcr.io/linuxserver/proot-apps:blender | linux/amd64,linux/arm64 | Blender is a free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, virtual reality, and computer games.|
-| brave | ghcr.io/linuxserver/proot-apps:brave | linux/amd64,linux/arm64 | Brave is a free and open-source web browser developed by Brave Software, Inc. based on the Chromium web browser. Brave is a privacy-focused browser, which automatically blocks most advertisements and website trackers in its default settings.|
-| braveorigin | ghcr.io/linuxserver/proot-apps:braveorigin | linux/amd64,linux/arm64 | Brave Origin is a minimalist version of Brave that allows users to disable the revenue-generating features that otherwise support Brave as a business.|
-| calibre | ghcr.io/linuxserver/proot-apps:calibre | linux/amd64,linux/arm64 | Calibre is a powerful and easy to use e-book manager. Users say it's outstanding and a must-have. It'll allow you to do nearly everything and it takes things a step beyond normal e-book software. It's also completely free and open source and great for both casual users and computer experts.|
-| celluloid | ghcr.io/linuxserver/proot-apps:celluloid | linux/amd64,linux/arm64 | Celluloid is a simple GTK+ frontend for mpv. It aims to be easy to use while maintaining high level of configurability.|
-| chrome | ghcr.io/linuxserver/proot-apps:chrome | linux/amd64 | Chrome is the official web browser from Google, built to be fast, secure, and customizable.|
-| chromium | ghcr.io/linuxserver/proot-apps:chromium | linux/amd64,linux/arm64 | Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web.|
-| deluge | ghcr.io/linuxserver/proot-apps:deluge | linux/amd64,linux/arm64 | Deluge is a lightweight, Free Software, cross-platform BitTorrent client.|
-| digikam | ghcr.io/linuxserver/proot-apps:digikam | linux/amd64,linux/arm64 | Professional Photo Management with the Power of Open Source.|
-| dolphin | ghcr.io/linuxserver/proot-apps:dolphin | linux/amd64,linux/arm64 | Dolphin is an emulator for two recent Nintendo video game consoles: the GameCube and the Wii. It allows PC gamers to enjoy games for these two consoles in full HD (1080p) with several enhancements: compatibility with all PC controllers, turbo speed, networked multiplayer, and even more.|
-| doublecmd | ghcr.io/linuxserver/proot-apps:doublecmd | linux/amd64,linux/arm64 | Double Commander is a free cross-platform open source file manager with two panels side by side (or one above the other). It is inspired by Total Commander and features some innovative new ideas.|
-| dreamm | ghcr.io/linuxserver/proot-apps:dreamm | linux/amd64,linux/arm64 | DREAMM is a bespoke emulator for LucasArts games, relying on low-level emulation instead of reverse engineering.|
-| earth | ghcr.io/linuxserver/proot-apps:earth | linux/amd64 | Google Earth Pro on desktop is free for users with advanced feature needs. Import and export GIS data, and go back in time with historical imagery.|
-| eclipsejava | ghcr.io/linuxserver/proot-apps:eclipsejava | linux/amd64,linux/arm64 | Eclipse IDE, the essential tools for any Java developer, including a Java IDE, a Git client, XML Editor, Maven and Gradle integration.|
-| edge | ghcr.io/linuxserver/proot-apps:edge | linux/amd64 | Microsoft Edge is a cross-platform web browser developed by Microsoft and based on Chromium.|
-| ferdium | ghcr.io/linuxserver/proot-apps:ferdium | linux/amd64,linux/arm64 | Ferdium is a desktop app that helps you organize how you use your favourite apps by combining them into one application.|
-| filezilla | ghcr.io/linuxserver/proot-apps:filezilla | linux/amd64,linux/arm64 | FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.|
-| firefox | ghcr.io/linuxserver/proot-apps:firefox | linux/amd64,linux/arm64 | Firefox Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.|
-| firefox-dev | ghcr.io/linuxserver/proot-apps:firefox-dev | linux/amd64,linux/arm64 | The browser made for developers, all the latest developer tools in beta in addition to features like the Multi-line Console Editor and WebSocket Inspector. A separate profile and path so you can easily run it alongside Release or Beta Firefox. Preferences tailored for web developers: Browser and remote debugging are enabled by default, as are the dark theme and developer toolbar button.|
-| flameshot | ghcr.io/linuxserver/proot-apps:flameshot | linux/amd64,linux/arm64 | Flameshot is a free and open-source, cross-platform tool to take screenshots with many built-in features to save you time.|
-| flycast | ghcr.io/linuxserver/proot-apps:flycast | linux/amd64 | Flycast is a multi-platform Sega Dreamcast, Naomi, Naomi 2, and Atomiswave emulator derived from reicast.|
-| freecad | ghcr.io/linuxserver/proot-apps:freecad | linux/amd64,linux/arm64 | FreeCAD is an open-source parametric 3D modeler made primarily to design real-life objects of any size.|
-| freeciv | ghcr.io/linuxserver/proot-apps:freeciv | linux/amd64,linux/arm64 | Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.|
-| freedoom | ghcr.io/linuxserver/proot-apps:freedoom | linux/amd64,linux/arm64 | The Freedoom project aims to produce three base-game data files (IWADs) for Doom-compatible engines. With it comes the capability to also play the wide range of mods created for Doom by a vibrant community.|
-| geany | ghcr.io/linuxserver/proot-apps:geany | linux/amd64,linux/arm64 | Geany is a powerful, stable and lightweight programmers text editor.|
-| gimp | ghcr.io/linuxserver/proot-apps:gimp | linux/amd64,linux/arm64 | GIMP is a free and open-source raster graphics editor used for image manipulation (retouching) and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks. It is extensible by means of plugins, and scriptable.|
-| handbrake | ghcr.io/linuxserver/proot-apps:handbrake | linux/amd64,linux/arm64 | HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.|
-| helium | ghcr.io/linuxserver/proot-apps:helium | linux/amd64,linux/arm64 | Helium is a Chromium-based web browser made for people, with love. Privacy-first with unbiased ad-blocking.|
-| idea | ghcr.io/linuxserver/proot-apps:idea | linux/amd64,linux/arm64 | IntelliJ IDEA Community Edition is an Integrated Development Environment (IDE) for Java and Kotlin designed to maximize developer productivity.|
-| inkscape | ghcr.io/linuxserver/proot-apps:inkscape | linux/amd64,linux/arm64 | Inkscape is professional quality vector graphics software which runs on Linux, Mac OS X and Windows desktop computers.|
-| joplin | ghcr.io/linuxserver/proot-apps:joplin | linux/amd64 | Joplin is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks.|
-| kdenlive | ghcr.io/linuxserver/proot-apps:kdenlive | linux/amd64 | Kdenlive is a powerful free and open source cross-platform video editing program made by the KDE community. Feature rich and production ready.|
-| keepassxc | ghcr.io/linuxserver/proot-apps:keepassxc | linux/amd64,linux/arm64 | KeePassXC is a modern, secure, and open-source password manager that stores and manages your most sensitive information.|
-| kicad | ghcr.io/linuxserver/proot-apps:kicad | linux/amd64,linux/arm64 | KiCad - A Cross Platform and Open Source Electronics Design Automation Suite.|
-| kodi | ghcr.io/linuxserver/proot-apps:kodi | linux/amd64,linux/arm64 | Kodi spawned from the love of media. It is media center and entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customisable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community.|
-| krita | ghcr.io/linuxserver/proot-apps:krita | linux/amd64,linux/arm64 | Krita is a professional FREE and open source painting program. It is made by artists that want to see affordable art tools for everyone.|
-| ktorrent | ghcr.io/linuxserver/proot-apps:ktorrent | linux/amd64,linux/arm64 | KTorrent is a BitTorrent application by KDE which allows you to download files using the BitTorrent protocol.|
-| libreoffice | ghcr.io/linuxserver/proot-apps:libreoffice | linux/amd64,linux/arm64 | LibreOffice is a free and powerful office suite, and a successor to OpenOffice.org (commonly known as OpenOffice). Its clean interface and feature-rich tools help you unleash your creativity and enhance your productivity.|
-| librewolf | ghcr.io/linuxserver/proot-apps:librewolf | linux/amd64,linux/arm64 | This project is an independent fork of Firefox, with the primary goals of privacy security and user freedom. It is the community run successor to LibreFox.|
-| lmms | ghcr.io/linuxserver/proot-apps:lmms | linux/amd64,linux/arm64 | LMMS is a free, open source, multiplatform digital audio workstation.|
-| logisim | ghcr.io/linuxserver/proot-apps:logisim | linux/amd64 | Logisim-evolution is educational software for designing and simulating digital logic circuits.|
-| lollypop | ghcr.io/linuxserver/proot-apps:lollypop | linux/amd64,linux/arm64 | Lollypop is a lightweight modern music player designed to work excellently on the GNOME desktop environment.|
-| maltego | ghcr.io/linuxserver/proot-apps:maltego | linux/amd64,linux/arm64 | Maltego is link analysis software used for open-source intelligence, forensics and other investigations.|
-| mayo | ghcr.io/linuxserver/proot-apps:mayo | linux/amd64,linux/arm64 | Mayo is an open-source 3D CAD viewer and converter based on Open CASCADE Technology and Qt.|
-| melonds | ghcr.io/linuxserver/proot-apps:melonds | linux/amd64,linux/arm64 | melonDS aims at providing fast and accurate Nintendo DS emulation.|
-| moonlight | ghcr.io/linuxserver/proot-apps:moonlight | linux/amd64,linux/arm64 | Moonlight allows you to play your PC games on almost any device, whether you're in another room or miles away from your gaming rig.|
-| mumble | ghcr.io/linuxserver/proot-apps:mumble | linux/amd64,linux/arm64 | Mumble is a free, open source, low latency, high quality voice chat application.|
-| nextcloud | ghcr.io/linuxserver/proot-apps:nextcloud | linux/amd64 | The Nextcloud desktop client keeps photos and documents always up to date, enabling you to work like you always did.|
-| obs | ghcr.io/linuxserver/proot-apps:obs | linux/amd64 | OBS Studio is a free and open-source, cross-platform screencasting and streaming app.|
-| obsidian | ghcr.io/linuxserver/proot-apps:obsidian | linux/amd64 | Obsidian is a note-taking app that lets you create, link, and organize your notes on your device, with hundreds of plugins and themes to customize your workflow.|
-| onlyoffice | ghcr.io/linuxserver/proot-apps:onlyoffice | linux/amd64 | Create, view and edit documents of any size and complexity. Work with most popular formats: DOCX, ODT, XLSX, ODS, CSV, PPTX, ODP, etc. Deal with multiple files within one and the same window thanks to the tab-based user interface.|
-| opencloud | ghcr.io/linuxserver/proot-apps:opencloud | linux/amd64 | The OpenCloud Desktop Client enables file synchronization between a local computer and OpenCloud.|
-| opera | ghcr.io/linuxserver/proot-apps:opera | linux/amd64 | Opera is a multi-platform web browser developed by its namesake company Opera. The browser is based on Chromium, but distinguishes itself from other Chromium-based browsers (Chrome, Edge, etc.) through its user interface and other features.|
-| orcaslicer | ghcr.io/linuxserver/proot-apps:orcaslicer | linux/amd64 | OrcaSlicer is an open source Next-Gen Slicing Software for Precision 3D Prints.|
-| parsec | ghcr.io/linuxserver/proot-apps:parsec | linux/amd64 | Parsec is a remote desktop you'll actually love. Connect to work, games, or projects wherever you are, whenever you want.|
-| postman | ghcr.io/linuxserver/proot-apps:postman | linux/amd64,linux/arm64 | Postman is an application that allows the testing of web APIs.|
-| ppsspp | ghcr.io/linuxserver/proot-apps:ppsspp | linux/amd64,linux/arm64 | PPSSPP is a PSP emulator that can run games in full HD resolution.|
-| pycharm | ghcr.io/linuxserver/proot-apps:pycharm | linux/amd64,linux/arm64 | PyCharm Community Edition IDE is designed by programmers, for programmers, to provide all the tools you need for productive Python development.|
-| qbittorrent | ghcr.io/linuxserver/proot-apps:qbittorrent | linux/amd64,linux/arm64 | The Qbittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.|
-| remmina | ghcr.io/linuxserver/proot-apps:remmina | linux/amd64,linux/arm64 | Remmina is a remote desktop client written in GTK, aiming to be useful for system administrators and travellers, who need to work with lots of remote computers in front of either large or tiny screens. Remmina supports multiple network protocols, in an integrated and consistent user interface.|
-| retroarch | ghcr.io/linuxserver/proot-apps:retroarch | linux/amd64,linux/arm64 | RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.|
-| rustdesk | ghcr.io/linuxserver/proot-apps:rustdesk | linux/amd64,linux/arm64 | RustDesk is a remote access and remote control software, primarily written in Rust, that enables remote maintenance of computers and other devices.|
-| ryujinx | ghcr.io/linuxserver/proot-apps:ryujinx | linux/amd64,linux/arm64 | Ryujinx is an open-source Nintendo Switch emulator.|
-| shortwave | ghcr.io/linuxserver/proot-apps:shortwave | linux/amd64,linux/arm64 | Shortwave is an internet radio player that provides access to a station database with over 30,000 stations.|
-| shotcut | ghcr.io/linuxserver/proot-apps:shotcut | linux/amd64,linux/arm64 | Shotcut is a free, open source, cross-platform video editor.|
-| spotify | ghcr.io/linuxserver/proot-apps:spotify | linux/amd64 | Spotify is a digital music service that gives you access to millions of songs. YOU MUST LOGIN WITH QR CODE!|
-| spotube | ghcr.io/linuxserver/proot-apps:spotube | linux/amd64 | Spotube is an open source, cross-platform Spotify client compatible across multiple platforms utilizing Spotify's data API and YouTube, Piped.video or JioSaavn as an audio source, eliminating the need for Spotify Premium|
-| sqlitebrowser | ghcr.io/linuxserver/proot-apps:sqlitebrowser | linux/amd64,linux/arm64 | DB Browser for SQLite is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.|
-| stremio | ghcr.io/linuxserver/proot-apps:stremio | linux/amd64 | Stremio offers a secure, modern and seamless entertainment experience. With its easy-to-use interface and diverse content library, including 4K HDR support, users can enjoy their favorite movies and TV shows across all their devices.|
-| tabby | ghcr.io/linuxserver/proot-apps:tabby | linux/amd64,linux/arm64 | Tabby is an infinitely customizable cross-platform terminal app for local shells, serial, SSH and Telnet connections.|
-| telegram | ghcr.io/linuxserver/proot-apps:telegram | linux/amd64,linux/arm64 | Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.|
-| thunderbird | ghcr.io/linuxserver/proot-apps:thunderbird | linux/amd64,linux/arm64 | Thunderbird is free and open-source email client software which also functions as a full personal information manager with a calendar and contactbook, as well as an RSS feed reader, chat client (IRC/XMPP/Matrix), and news client.|
-| torbrowser | ghcr.io/linuxserver/proot-apps:torbrowser | linux/amd64 | Tor is free and open-source software for enabling anonymous communication by directing Internet traffic through a free, worldwide, volunteer overlay network.|
-| ungoogledchromium | ghcr.io/linuxserver/proot-apps:ungoogledchromium | linux/amd64 | Google Chromium, sans integration with Google.|
-| vivaldi | ghcr.io/linuxserver/proot-apps:vivaldi | linux/amd64,linux/arm64 | Vivaldi is a freeware, cross-platform web browser with a built-in email client developed by Vivaldi Technologies.|
-| vlc | ghcr.io/linuxserver/proot-apps:vlc | linux/amd64,linux/arm64 | VLC media player (previously the VideoLAN Client and commonly known as simply VLC) is a free and open-source, portable, cross-platform media player software and streaming media server developed by the VideoLAN project.|
-| vscode | ghcr.io/linuxserver/proot-apps:vscode | linux/amd64,linux/arm64 | Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS|
-| vscodium | ghcr.io/linuxserver/proot-apps:vscodium | linux/amd64,linux/arm64 | VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.|
-| weather | ghcr.io/linuxserver/proot-apps:weather | linux/amd64,linux/arm64 | A small application that allows you to monitor the current weather conditions for your city, or anywhere in the world.|
-| webcord | ghcr.io/linuxserver/proot-apps:webcord | linux/amd64,linux/arm64 | WebCord can be summarized as a pack of security and privacy hardenings, Discord features reimplementations, Electron / Chromium / Discord bugs workarounds, stylesheets, internal pages and wrapped https://discord.com page, designed to conform with ToS as much as it is possible.|
-| wechat | ghcr.io/linuxserver/proot-apps:wechat | linux/amd64 | WeChat or Weixin in Chinese is an instant messaging, social media, and mobile payment app developed by Tencent.|
-| winegui | ghcr.io/linuxserver/proot-apps:winegui | linux/amd64 | A user-interface friendly Wine (A compatibility layer capable of running Windows applications under Linux) Manager.|
-| wpsoffice | ghcr.io/linuxserver/proot-apps:wpsoffice | linux/amd64 | WPS Office is a lightweight, feature-rich comprehensive office suite with high compatibility. As a handy and professional office software, WPS Office allows you to edit files in Writer, Presentation, Spreadsheet, and PDF to improve your work efficiency.|
-| yandex | ghcr.io/linuxserver/proot-apps:yandex | linux/amd64 | Yandex Browser is a freeware web browser developed by the Russian technology corporation Yandex that uses the Blink web browser.|
-| zen | ghcr.io/linuxserver/proot-apps:zen | linux/amd64,linux/arm64 | Zen Browser is a free and open-source fork of Mozilla Firefox with a focus on privacy, customizability and design.|
-| zim | ghcr.io/linuxserver/proot-apps:zim | linux/amd64,linux/arm64 | Zim is a graphical text editor used to maintain a collection of wiki pages.|
-| zoom | ghcr.io/linuxserver/proot-apps:zoom | linux/amd64 | Zoom is a proprietary videotelephony software program developed by Zoom Video Communications.|
-| zotero | ghcr.io/linuxserver/proot-apps:zotero | linux/amd64 | Zotero is a free, easy-to-use tool to help you collect, organize, annotate, cite, and share research.|
+| anydesk | ghcr.io/nbucking/proot-apps:anydesk | linux/amd64 | AnyDesk ensures secure and reliable remote desktop connections for IT professionals and on-the-go individuals alike.|
+| ardour | ghcr.io/nbucking/proot-apps:ardour | linux/amd64,linux/arm64 | Ardour is an open source, collaborative effort of a worldwide team including musicians, programmers, and professional recording engineers.|
+| audacity | ghcr.io/nbucking/proot-apps:audacity | linux/amd64 | Audacity is an easy-to-use, multi-track audio editor and recorder. Developed by a group of volunteers as open source.|
+| beekeeperstudio | ghcr.io/nbucking/proot-apps:beekeeperstudio | linux/amd64 | Use Beekeeper Studio to query and manage your relational databases, like MySQL, Postgres, SQLite, and SQL Server.|
+| bitwarden | ghcr.io/nbucking/proot-apps:bitwarden | linux/amd64 | Bitwarden is a secure and free password manager for all of your devices.|
+| blender | ghcr.io/nbucking/proot-apps:blender | linux/amd64,linux/arm64 | Blender is a free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, virtual reality, and computer games.|
+| brave | ghcr.io/nbucking/proot-apps:brave | linux/amd64,linux/arm64 | Brave is a free and open-source web browser developed by Brave Software, Inc. based on the Chromium web browser. Brave is a privacy-focused browser, which automatically blocks most advertisements and website trackers in its default settings.|
+| braveorigin | ghcr.io/nbucking/proot-apps:braveorigin | linux/amd64,linux/arm64 | Brave Origin is a minimalist version of Brave that allows users to disable the revenue-generating features that otherwise support Brave as a business.|
+| calibre | ghcr.io/nbucking/proot-apps:calibre | linux/amd64,linux/arm64 | Calibre is a powerful and easy to use e-book manager. Users say it's outstanding and a must-have. It'll allow you to do nearly everything and it takes things a step beyond normal e-book software. It's also completely free and open source and great for both casual users and computer experts.|
+| celluloid | ghcr.io/nbucking/proot-apps:celluloid | linux/amd64,linux/arm64 | Celluloid is a simple GTK+ frontend for mpv. It aims to be easy to use while maintaining high level of configurability.|
+| chrome | ghcr.io/nbucking/proot-apps:chrome | linux/amd64 | Chrome is the official web browser from Google, built to be fast, secure, and customizable.|
+| chromium | ghcr.io/nbucking/proot-apps:chromium | linux/amd64,linux/arm64 | Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web.|
+| deluge | ghcr.io/nbucking/proot-apps:deluge | linux/amd64,linux/arm64 | Deluge is a lightweight, Free Software, cross-platform BitTorrent client.|
+| digikam | ghcr.io/nbucking/proot-apps:digikam | linux/amd64,linux/arm64 | Professional Photo Management with the Power of Open Source.|
+| dolphin | ghcr.io/nbucking/proot-apps:dolphin | linux/amd64,linux/arm64 | Dolphin is an emulator for two recent Nintendo video game consoles: the GameCube and the Wii. It allows PC gamers to enjoy games for these two consoles in full HD (1080p) with several enhancements: compatibility with all PC controllers, turbo speed, networked multiplayer, and even more.|
+| doublecmd | ghcr.io/nbucking/proot-apps:doublecmd | linux/amd64,linux/arm64 | Double Commander is a free cross-platform open source file manager with two panels side by side (or one above the other). It is inspired by Total Commander and features some innovative new ideas.|
+| dreamm | ghcr.io/nbucking/proot-apps:dreamm | linux/amd64,linux/arm64 | DREAMM is a bespoke emulator for LucasArts games, relying on low-level emulation instead of reverse engineering.|
+| earth | ghcr.io/nbucking/proot-apps:earth | linux/amd64 | Google Earth Pro on desktop is free for users with advanced feature needs. Import and export GIS data, and go back in time with historical imagery.|
+| eclipsejava | ghcr.io/nbucking/proot-apps:eclipsejava | linux/amd64,linux/arm64 | Eclipse IDE, the essential tools for any Java developer, including a Java IDE, a Git client, XML Editor, Maven and Gradle integration.|
+| edge | ghcr.io/nbucking/proot-apps:edge | linux/amd64 | Microsoft Edge is a cross-platform web browser developed by Microsoft and based on Chromium.|
+| ferdium | ghcr.io/nbucking/proot-apps:ferdium | linux/amd64,linux/arm64 | Ferdium is a desktop app that helps you organize how you use your favourite apps by combining them into one application.|
+| filezilla | ghcr.io/nbucking/proot-apps:filezilla | linux/amd64,linux/arm64 | FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.|
+| firefox | ghcr.io/nbucking/proot-apps:firefox | linux/amd64,linux/arm64 | Firefox Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.|
+| firefox-dev | ghcr.io/nbucking/proot-apps:firefox-dev | linux/amd64,linux/arm64 | The browser made for developers, all the latest developer tools in beta in addition to features like the Multi-line Console Editor and WebSocket Inspector. A separate profile and path so you can easily run it alongside Release or Beta Firefox. Preferences tailored for web developers: Browser and remote debugging are enabled by default, as are the dark theme and developer toolbar button.|
+| flameshot | ghcr.io/nbucking/proot-apps:flameshot | linux/amd64,linux/arm64 | Flameshot is a free and open-source, cross-platform tool to take screenshots with many built-in features to save you time.|
+| flycast | ghcr.io/nbucking/proot-apps:flycast | linux/amd64 | Flycast is a multi-platform Sega Dreamcast, Naomi, Naomi 2, and Atomiswave emulator derived from reicast.|
+| freecad | ghcr.io/nbucking/proot-apps:freecad | linux/amd64,linux/arm64 | FreeCAD is an open-source parametric 3D modeler made primarily to design real-life objects of any size.|
+| freeciv | ghcr.io/nbucking/proot-apps:freeciv | linux/amd64,linux/arm64 | Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.|
+| freedoom | ghcr.io/nbucking/proot-apps:freedoom | linux/amd64,linux/arm64 | The Freedoom project aims to produce three base-game data files (IWADs) for Doom-compatible engines. With it comes the capability to also play the wide range of mods created for Doom by a vibrant community.|
+| geany | ghcr.io/nbucking/proot-apps:geany | linux/amd64,linux/arm64 | Geany is a powerful, stable and lightweight programmers text editor.|
+| gimp | ghcr.io/nbucking/proot-apps:gimp | linux/amd64,linux/arm64 | GIMP is a free and open-source raster graphics editor used for image manipulation (retouching) and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks. It is extensible by means of plugins, and scriptable.|
+| handbrake | ghcr.io/nbucking/proot-apps:handbrake | linux/amd64,linux/arm64 | HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.|
+| helium | ghcr.io/nbucking/proot-apps:helium | linux/amd64,linux/arm64 | Helium is a Chromium-based web browser made for people, with love. Privacy-first with unbiased ad-blocking.|
+| idea | ghcr.io/nbucking/proot-apps:idea | linux/amd64,linux/arm64 | IntelliJ IDEA Community Edition is an Integrated Development Environment (IDE) for Java and Kotlin designed to maximize developer productivity.|
+| inkscape | ghcr.io/nbucking/proot-apps:inkscape | linux/amd64,linux/arm64 | Inkscape is professional quality vector graphics software which runs on Linux, Mac OS X and Windows desktop computers.|
+| joplin | ghcr.io/nbucking/proot-apps:joplin | linux/amd64 | Joplin is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks.|
+| kdenlive | ghcr.io/nbucking/proot-apps:kdenlive | linux/amd64 | Kdenlive is a powerful free and open source cross-platform video editing program made by the KDE community. Feature rich and production ready.|
+| keepassxc | ghcr.io/nbucking/proot-apps:keepassxc | linux/amd64,linux/arm64 | KeePassXC is a modern, secure, and open-source password manager that stores and manages your most sensitive information.|
+| kicad | ghcr.io/nbucking/proot-apps:kicad | linux/amd64,linux/arm64 | KiCad - A Cross Platform and Open Source Electronics Design Automation Suite.|
+| kodi | ghcr.io/nbucking/proot-apps:kodi | linux/amd64,linux/arm64 | Kodi spawned from the love of media. It is media center and entertainment hub that brings all your digital media together into a beautiful and user friendly package. It is 100% free and open source, very customisable and runs on a wide variety of devices. It is supported by a dedicated team of volunteers and a huge community.|
+| krita | ghcr.io/nbucking/proot-apps:krita | linux/amd64,linux/arm64 | Krita is a professional FREE and open source painting program. It is made by artists that want to see affordable art tools for everyone.|
+| ktorrent | ghcr.io/nbucking/proot-apps:ktorrent | linux/amd64,linux/arm64 | KTorrent is a BitTorrent application by KDE which allows you to download files using the BitTorrent protocol.|
+| libreoffice | ghcr.io/nbucking/proot-apps:libreoffice | linux/amd64,linux/arm64 | LibreOffice is a free and powerful office suite, and a successor to OpenOffice.org (commonly known as OpenOffice). Its clean interface and feature-rich tools help you unleash your creativity and enhance your productivity.|
+| librewolf | ghcr.io/nbucking/proot-apps:librewolf | linux/amd64,linux/arm64 | This project is an independent fork of Firefox, with the primary goals of privacy security and user freedom. It is the community run successor to LibreFox.|
+| lmms | ghcr.io/nbucking/proot-apps:lmms | linux/amd64,linux/arm64 | LMMS is a free, open source, multiplatform digital audio workstation.|
+| logisim | ghcr.io/nbucking/proot-apps:logisim | linux/amd64 | Logisim-evolution is educational software for designing and simulating digital logic circuits.|
+| lollypop | ghcr.io/nbucking/proot-apps:lollypop | linux/amd64,linux/arm64 | Lollypop is a lightweight modern music player designed to work excellently on the GNOME desktop environment.|
+| maltego | ghcr.io/nbucking/proot-apps:maltego | linux/amd64,linux/arm64 | Maltego is link analysis software used for open-source intelligence, forensics and other investigations.|
+| mayo | ghcr.io/nbucking/proot-apps:mayo | linux/amd64,linux/arm64 | Mayo is an open-source 3D CAD viewer and converter based on Open CASCADE Technology and Qt.|
+| melonds | ghcr.io/nbucking/proot-apps:melonds | linux/amd64,linux/arm64 | melonDS aims at providing fast and accurate Nintendo DS emulation.|
+| moonlight | ghcr.io/nbucking/proot-apps:moonlight | linux/amd64,linux/arm64 | Moonlight allows you to play your PC games on almost any device, whether you're in another room or miles away from your gaming rig.|
+| mumble | ghcr.io/nbucking/proot-apps:mumble | linux/amd64,linux/arm64 | Mumble is a free, open source, low latency, high quality voice chat application.|
+| nextcloud | ghcr.io/nbucking/proot-apps:nextcloud | linux/amd64 | The Nextcloud desktop client keeps photos and documents always up to date, enabling you to work like you always did.|
+| obs | ghcr.io/nbucking/proot-apps:obs | linux/amd64 | OBS Studio is a free and open-source, cross-platform screencasting and streaming app.|
+| obsidian | ghcr.io/nbucking/proot-apps:obsidian | linux/amd64 | Obsidian is a note-taking app that lets you create, link, and organize your notes on your device, with hundreds of plugins and themes to customize your workflow.|
+| onlyoffice | ghcr.io/nbucking/proot-apps:onlyoffice | linux/amd64 | Create, view and edit documents of any size and complexity. Work with most popular formats: DOCX, ODT, XLSX, ODS, CSV, PPTX, ODP, etc. Deal with multiple files within one and the same window thanks to the tab-based user interface.|
+| opencloud | ghcr.io/nbucking/proot-apps:opencloud | linux/amd64 | The OpenCloud Desktop Client enables file synchronization between a local computer and OpenCloud.|
+| opera | ghcr.io/nbucking/proot-apps:opera | linux/amd64 | Opera is a multi-platform web browser developed by its namesake company Opera. The browser is based on Chromium, but distinguishes itself from other Chromium-based browsers (Chrome, Edge, etc.) through its user interface and other features.|
+| orcaslicer | ghcr.io/nbucking/proot-apps:orcaslicer | linux/amd64 | OrcaSlicer is an open source Next-Gen Slicing Software for Precision 3D Prints.|
+| parsec | ghcr.io/nbucking/proot-apps:parsec | linux/amd64 | Parsec is a remote desktop you'll actually love. Connect to work, games, or projects wherever you are, whenever you want.|
+| postman | ghcr.io/nbucking/proot-apps:postman | linux/amd64,linux/arm64 | Postman is an application that allows the testing of web APIs.|
+| ppsspp | ghcr.io/nbucking/proot-apps:ppsspp | linux/amd64,linux/arm64 | PPSSPP is a PSP emulator that can run games in full HD resolution.|
+| pycharm | ghcr.io/nbucking/proot-apps:pycharm | linux/amd64,linux/arm64 | PyCharm Community Edition IDE is designed by programmers, for programmers, to provide all the tools you need for productive Python development.|
+| qbittorrent | ghcr.io/nbucking/proot-apps:qbittorrent | linux/amd64,linux/arm64 | The Qbittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.|
+| remmina | ghcr.io/nbucking/proot-apps:remmina | linux/amd64,linux/arm64 | Remmina is a remote desktop client written in GTK, aiming to be useful for system administrators and travellers, who need to work with lots of remote computers in front of either large or tiny screens. Remmina supports multiple network protocols, in an integrated and consistent user interface.|
+| retroarch | ghcr.io/nbucking/proot-apps:retroarch | linux/amd64,linux/arm64 | RetroArch is a free and open-source, cross-platform frontend for emulators, game engines, video games, media players and other applications.|
+| rustdesk | ghcr.io/nbucking/proot-apps:rustdesk | linux/amd64,linux/arm64 | RustDesk is a remote access and remote control software, primarily written in Rust, that enables remote maintenance of computers and other devices.|
+| ryujinx | ghcr.io/nbucking/proot-apps:ryujinx | linux/amd64,linux/arm64 | Ryujinx is an open-source Nintendo Switch emulator.|
+| shortwave | ghcr.io/nbucking/proot-apps:shortwave | linux/amd64,linux/arm64 | Shortwave is an internet radio player that provides access to a station database with over 30,000 stations.|
+| shotcut | ghcr.io/nbucking/proot-apps:shotcut | linux/amd64,linux/arm64 | Shotcut is a free, open source, cross-platform video editor.|
+| spotify | ghcr.io/nbucking/proot-apps:spotify | linux/amd64 | Spotify is a digital music service that gives you access to millions of songs. YOU MUST LOGIN WITH QR CODE!|
+| spotube | ghcr.io/nbucking/proot-apps:spotube | linux/amd64 | Spotube is an open source, cross-platform Spotify client compatible across multiple platforms utilizing Spotify's data API and YouTube, Piped.video or JioSaavn as an audio source, eliminating the need for Spotify Premium|
+| sqlitebrowser | ghcr.io/nbucking/proot-apps:sqlitebrowser | linux/amd64,linux/arm64 | DB Browser for SQLite is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.|
+| stremio | ghcr.io/nbucking/proot-apps:stremio | linux/amd64 | Stremio offers a secure, modern and seamless entertainment experience. With its easy-to-use interface and diverse content library, including 4K HDR support, users can enjoy their favorite movies and TV shows across all their devices.|
+| tabby | ghcr.io/nbucking/proot-apps:tabby | linux/amd64,linux/arm64 | Tabby is an infinitely customizable cross-platform terminal app for local shells, serial, SSH and Telnet connections.|
+| telegram | ghcr.io/nbucking/proot-apps:telegram | linux/amd64,linux/arm64 | Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.|
+| thunderbird | ghcr.io/nbucking/proot-apps:thunderbird | linux/amd64,linux/arm64 | Thunderbird is free and open-source email client software which also functions as a full personal information manager with a calendar and contactbook, as well as an RSS feed reader, chat client (IRC/XMPP/Matrix), and news client.|
+| torbrowser | ghcr.io/nbucking/proot-apps:torbrowser | linux/amd64 | Tor is free and open-source software for enabling anonymous communication by directing Internet traffic through a free, worldwide, volunteer overlay network.|
+| ungoogledchromium | ghcr.io/nbucking/proot-apps:ungoogledchromium | linux/amd64 | Google Chromium, sans integration with Google.|
+| vivaldi | ghcr.io/nbucking/proot-apps:vivaldi | linux/amd64,linux/arm64 | Vivaldi is a freeware, cross-platform web browser with a built-in email client developed by Vivaldi Technologies.|
+| vlc | ghcr.io/nbucking/proot-apps:vlc | linux/amd64,linux/arm64 | VLC media player (previously the VideoLAN Client and commonly known as simply VLC) is a free and open-source, portable, cross-platform media player software and streaming media server developed by the VideoLAN project.|
+| vscode | ghcr.io/nbucking/proot-apps:vscode | linux/amd64,linux/arm64 | Visual Studio Code is a source-code editor developed by Microsoft for Windows, Linux and macOS|
+| vscodium | ghcr.io/nbucking/proot-apps:vscodium | linux/amd64,linux/arm64 | VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.|
+| weather | ghcr.io/nbucking/proot-apps:weather | linux/amd64,linux/arm64 | A small application that allows you to monitor the current weather conditions for your city, or anywhere in the world.|
+| webcord | ghcr.io/nbucking/proot-apps:webcord | linux/amd64,linux/arm64 | WebCord can be summarized as a pack of security and privacy hardenings, Discord features reimplementations, Electron / Chromium / Discord bugs workarounds, stylesheets, internal pages and wrapped https://discord.com page, designed to conform with ToS as much as it is possible.|
+| wechat | ghcr.io/nbucking/proot-apps:wechat | linux/amd64 | WeChat or Weixin in Chinese is an instant messaging, social media, and mobile payment app developed by Tencent.|
+| winegui | ghcr.io/nbucking/proot-apps:winegui | linux/amd64 | A user-interface friendly Wine (A compatibility layer capable of running Windows applications under Linux) Manager.|
+| wpsoffice | ghcr.io/nbucking/proot-apps:wpsoffice | linux/amd64 | WPS Office is a lightweight, feature-rich comprehensive office suite with high compatibility. As a handy and professional office software, WPS Office allows you to edit files in Writer, Presentation, Spreadsheet, and PDF to improve your work efficiency.|
+| yandex | ghcr.io/nbucking/proot-apps:yandex | linux/amd64 | Yandex Browser is a freeware web browser developed by the Russian technology corporation Yandex that uses the Blink web browser.|
+| zen | ghcr.io/nbucking/proot-apps:zen | linux/amd64,linux/arm64 | Zen Browser is a free and open-source fork of Mozilla Firefox with a focus on privacy, customizability and design.|
+| zim | ghcr.io/nbucking/proot-apps:zim | linux/amd64,linux/arm64 | Zim is a graphical text editor used to maintain a collection of wiki pages.|
+| zoom | ghcr.io/nbucking/proot-apps:zoom | linux/amd64 | Zoom is a proprietary videotelephony software program developed by Zoom Video Communications.|
+| zotero | ghcr.io/nbucking/proot-apps:zotero | linux/amd64 | Zotero is a free, easy-to-use tool to help you collect, organize, annotate, cite, and share research.|
 
 
 </details>
