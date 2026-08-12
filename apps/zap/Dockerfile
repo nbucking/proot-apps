@@ -10,7 +10,12 @@ RUN \
   apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
-    tar && \
+    tar \
+    libgl1-mesa-dri \
+    libgbm1 \
+    libgl1 \
+    libegl1 \
+    xterm && \
   ZAP_URL=$(curl -fsSL https://api.github.com/repos/zerx-lab/zap/releases/latest \
     | awk -F'"' '/browser_download_url.*zap-linux-x86_64\.tar\.gz/{print $4;exit}') && \
   mkdir -p /opt/zap && \
