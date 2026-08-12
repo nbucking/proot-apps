@@ -1,3 +1,8 @@
 #!/bin/bash
+# Zap PA entrypoint wrapper
+export WGPU_BACKEND="${WGPU_BACKEND:-gl}"
+export MESA_GL_VERSION_OVERRIDE="${MESA_GL_VERSION_OVERRIDE:-3.3}"
+export NO_AT_BRIDGE=1
+
 cd /opt/zap || exit 1
 exec ./zap-oss "$@"
