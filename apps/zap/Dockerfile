@@ -1,3 +1,4 @@
+# Zap PA proot app package
 ARG REPO
 FROM ghcr.io/${REPO}:debian-trixie AS rootfs
 ARG REPO
