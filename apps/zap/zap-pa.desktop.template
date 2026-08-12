@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Zap PA
+Comment=Local-first agentic terminal
+Icon=zap-pa
+Exec=/bin/sh -c "$HOME/.local/bin/proot-apps run ghcr.io/__REPO__:zap %U"
+Terminal=false
+Categories=Development;TerminalEmulator;

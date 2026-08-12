@@ -1,0 +1,33 @@
+#!/bin/bash
+
+## Desktop and icons install ##
+echo "Adding icon"
+mkdir -p $HOME/.local/share/icons/hicolor/scalable/apps/
+mkdir -p $HOME/.local/share/icons/hicolor/256x256/apps/
+mkdir -p $HOME/.local/share/icons/hicolor/48x48/apps/
+if [ -f /usr/share/icons/hicolor/scalable/apps/zap-pa.svg ]; then
+  cp \
+    /usr/share/icons/hicolor/scalable/apps/zap-pa.svg \
+    $HOME/.local/share/icons/hicolor/scalable/apps/zap-pa.svg
+fi
+if [ -f /usr/share/icons/hicolor/256x256/apps/zap-pa.png ]; then
+  cp \
+    /usr/share/icons/hicolor/256x256/apps/zap-pa.png \
+    $HOME/.local/share/icons/hicolor/256x256/apps/zap-pa.png
+fi
+if [ -f /usr/share/icons/hicolor/48x48/apps/zap-pa.png ]; then
+  cp \
+    /usr/share/icons/hicolor/48x48/apps/zap-pa.png \
+    $HOME/.local/share/icons/hicolor/48x48/apps/zap-pa.png
+fi
+echo "Adding start menu entry"
+mkdir -p $HOME/.local/share/applications/
+cp \
+  /usr/share/applications/zap-pa.desktop \
+  $HOME/.local/share/applications/
+echo "Adding desktop shortcut"
+mkdir -p $HOME/Desktop
+cp \
+  /usr/share/applications/zap-pa.desktop \
+  $HOME/Desktop/
+chmod +x $HOME/Desktop/zap-pa.desktop

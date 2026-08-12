@@ -1,4 +1,7 @@
 #!/bin/bash
 
+# WebKitGTK can render a blank web view under webtop/proot accelerated compositing.
+export WEBKIT_DISABLE_COMPOSITING_MODE="${WEBKIT_DISABLE_COMPOSITING_MODE:-1}"
+
 # Start AWS WorkSpaces Client
-workspacesclient "$@"
+exec workspacesclient "$@"
