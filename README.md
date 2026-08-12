@@ -169,6 +169,7 @@ proot-apps update firefox
 | winegui | ghcr.io/nbucking/proot-apps:winegui | linux/amd64 | A user-interface friendly Wine (A compatibility layer capable of running Windows applications under Linux) Manager.|
 | wpsoffice | ghcr.io/nbucking/proot-apps:wpsoffice | linux/amd64 | WPS Office is a lightweight, feature-rich comprehensive office suite with high compatibility. As a handy and professional office software, WPS Office allows you to edit files in Writer, Presentation, Spreadsheet, and PDF to improve your work efficiency.|
 | yandex | ghcr.io/nbucking/proot-apps:yandex | linux/amd64 | Yandex Browser is a freeware web browser developed by the Russian technology corporation Yandex that uses the Blink web browser.|
+| zap | ghcr.io/nbucking/proot-apps:zap | linux/amd64 | Zap is an open, local-first terminal with first-class AI and agent support.|
 | zen | ghcr.io/nbucking/proot-apps:zen | linux/amd64,linux/arm64 | Zen Browser is a free and open-source fork of Mozilla Firefox with a focus on privacy, customizability and design.|
 | zim | ghcr.io/nbucking/proot-apps:zim | linux/amd64,linux/arm64 | Zim is a graphical text editor used to maintain a collection of wiki pages.|
 | zoom | ghcr.io/nbucking/proot-apps:zoom | linux/amd64 | Zoom is a proprietary videotelephony software program developed by Zoom Video Communications.|
