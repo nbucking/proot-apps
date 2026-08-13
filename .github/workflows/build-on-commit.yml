@@ -35,7 +35,6 @@ jobs:
           - name: alpine-323
           - name: alpine-edge
           - name: debian-trixie
-          - name: ubuntu-jammy
           - name: ubuntu-noble
   meta:
     name: Ingest Metadata
