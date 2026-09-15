@@ -21,7 +21,7 @@ jobs:
           chmod +x yq
           {
             echo "matrix<<EOF"
-            ./yq -o=j -I=0 '.include |= map(select(.disabled != true))' metadata/metadata.yml
+            ./yq -o=j -I=0 '.include |= map(select(has("disabled") | not))' metadata/metadata.yml
             echo "EOF"
           } >> $GITHUB_OUTPUT
   pupdate:

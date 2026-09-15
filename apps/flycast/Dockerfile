@@ -7,6 +7,7 @@ RUN \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y \
+    jq \
     libgpg-error0 && \
   DOWNLOAD_URL=$(curl -sX GET "https://api.github.com/repos/flyinghead/flycast/releases/latest" \
     | jq -r '.assets[] | select(.name | endswith(".AppImage") and contains("x86_64")).browser_download_url' | head -n1) && \

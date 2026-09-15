@@ -20,6 +20,7 @@ RUN \
     gstreamer1.0-qt5 \
     gstreamer1.0-tools \
     gstreamer1.0-x \
+    jq \
     libatk1.0 \
     libatk-bridge2.0 \
     libgstreamer-plugins-bad1.0 \

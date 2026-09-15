@@ -8,6 +8,7 @@ RUN \
   apt-get update && \
   apt-get install -y \
     ffmpeg \
+    jq \
     lame \
     libatk1.0 \
     libatk-bridge2.0 \

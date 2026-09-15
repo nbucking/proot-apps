@@ -7,13 +7,14 @@ RUN \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
-    fonts-noto-color-emoji && \
+    fonts-noto-color-emoji \
+    jq && \
   ARCH=$(uname -m| sed 's/x86_64/amd64/g'| sed 's/aarch64/arm64/') && \
   WEBCORD_VERSION=$(curl -sX GET "https://api.github.com/repos/SpacingBat3/WebCord/releases/latest" \
-    | awk '/tag_name/{print $4;exit}' FS='[""]') && \
+    | jq -r '.tag_name') && \
   curl -o \
     /tmp/webcord.deb -L \
-    "https://github.com/SpacingBat3/WebCord/releases/download/${WEBCORD_VERSION}/webcord_$(echo ${WEBCORD_VERSION}| cut -c2-)_${ARCH}.deb" && \
+    "https://github.com/SpacingBat3/WebCord/releases/download/${WEBCORD_VERSION}/webcord_${WEBCORD_VERSION#v}_${ARCH}.deb" && \
   apt install -y --no-install-recommends \
     /tmp/webcord.deb && \
   echo "**** customize desktop file ****" && \

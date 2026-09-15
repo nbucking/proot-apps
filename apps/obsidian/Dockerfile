@@ -8,6 +8,7 @@ RUN \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     git \
+    jq \
     libgtk-3-bin \
     libatk1.0 \
     libatk-bridge2.0 \
