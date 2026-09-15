@@ -7,15 +7,15 @@ RUN \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
-    jq \
+    ca-certificates \
+    curl \
+    gnupg \
     libpolkit-gobject-1-0 && \
-  DEB=$(curl -sL https://download.anydesk.com/linux/ \
-  | awk -F '(">|<)' '/_amd64.deb/ && !/sum/ {print $3}' |tail -n1) && \
-  curl -o \
-    /tmp/anydesk.deb -L \
-    "https://download.anydesk.com/linux/${DEB}" && \
-  apt install -y --no-install-recommends \
-    /tmp/anydesk.deb || : && \
+  mkdir -p /etc/apt/keyrings && \
+  curl -fsSL https://keys.anydesk.com/repos/DEB-GPG-KEY | gpg --dearmor -o /etc/apt/keyrings/keys.anydesk.com.gpg && \
+  echo "deb [signed-by=/etc/apt/keyrings/keys.anydesk.com.gpg] https://deb.anydesk.com all main" > /etc/apt/sources.list.d/anydesk-stable.list && \
+  apt-get update && \
+  apt-get install -y --no-install-recommends anydesk && \
   echo "**** customize desktop file ****" && \
   sed -i \
     -e "/^Exec=/c Exec=/bin/sh -c \"\$HOME\/.local\/bin\/proot-apps run ghcr.io/${REPO}:anydesk %U\"" \

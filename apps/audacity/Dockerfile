@@ -14,12 +14,12 @@ RUN \
     libnss3 \
     libportaudio2 \
     python3-xdg && \
-  AUDACITY_VERSION=$(curl -sX GET "https://api.github.com/repos/audacity/audacity/releases/latest" \
-    | awk '/tag_name/{print $4;exit}' FS='[""]' | sed 's|^Audacity-||') && \
+  DOWNLOAD_URL=$(curl -sX GET "https://api.github.com/repos/audacity/audacity/releases/latest" \
+    | jq -r '.assets[] | select(.name | endswith("x86_64.AppImage") or endswith("x64-22.04.AppImage")).browser_download_url' | head -n1) && \
   cd /tmp && \
   curl -o \
     /tmp/audacity.app -L \
-    "https://github.com/audacity/audacity/releases/download/Audacity-${AUDACITY_VERSION}/audacity-linux-${AUDACITY_VERSION}-x64-22.04.AppImage" && \
+    "${DOWNLOAD_URL}" && \
   chmod +x /tmp/audacity.app && \
   ./audacity.app --appimage-extract && \
   mv squashfs-root /opt/audacity && \

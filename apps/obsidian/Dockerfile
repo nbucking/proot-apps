@@ -13,13 +13,14 @@ RUN \
     libatk-bridge2.0 \
     libnss3 \
     python3-xdg && \
-  OBSIDIAN_VERSION=$(curl -sX GET "https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest"| awk '/tag_name/{print $4;exit}' FS='[""]') && \
-  OBSIDIAN_NOV=$(echo ${OBSIDIAN_VERSION} | sed 's/v//g') && \
-  if [ "$(uname -m)" = "x86_64" ]; then \
-    URL="https://github.com/obsidianmd/obsidian-releases/releases/download/${OBSIDIAN_VERSION}/Obsidian-${OBSIDIAN_NOV}.AppImage"; \
-  else \
-    URL="https://github.com/obsidianmd/obsidian-releases/releases/download/${OBSIDIAN_VERSION}/Obsidian-${OBSIDIAN_NOV}-arm64.AppImage"; \
-  fi && \
+  URL=$(curl -sX GET "https://api.github.com/repos/obsidianmd/obsidian-releases/releases" | jq -r --arg arch "$(if [ "$(uname -m)" = "x86_64" ]; then echo "x86_64"; else echo "arm64"; fi)" '
+    [ .[] | .assets[] | select(.name | endswith(".AppImage")) ] |
+    if $arch == "x86_64" then
+      [ .[] | select(.name | test("arm64") | not) ]
+    else
+      [ .[] | select(.name | test("arm64")) ]
+    end | .[0].browser_download_url
+  ') && \
   curl -o \
     /tmp/obsidian.app -L \
     "${URL}" && \
@@ -28,13 +29,14 @@ RUN \
   ./obsidian.app --appimage-extract && `#This does not work in QEMU for arm64`\
   mv squashfs-root /opt/obsidian && \
   echo "**** customize desktop file ****" && \
+  DESKTOP_FILE=$(ls /opt/obsidian/*obsidian*.desktop /opt/obsidian/*Obsidian*.desktop 2>/dev/null | head -n1) && \
   sed -i \
     -e "/^Exec=/c Exec=/bin/sh -c \"\$HOME\/.local\/bin\/proot-apps run ghcr.io/${REPO}:obsidian %U\"" \
     -e "s/Name=Obsidian/Name=Obsidian PA/g" \
     -e '/^TryExec=/d' \
-    /opt/obsidian/obsidian.desktop && \
+    "${DESKTOP_FILE}" && \
   mv \
-    /opt/obsidian/obsidian.desktop \
+    "${DESKTOP_FILE}" \
     /usr/share/applications/obsidian-pa.desktop && \
   echo "**** set bin name ****" && \
   echo "obsidian-pa" > /bin-name && \

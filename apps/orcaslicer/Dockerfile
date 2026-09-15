@@ -29,10 +29,10 @@ RUN \
     libwebkit2gtk-4.1-0 \
     libwx-perl \
     python3-xdg && \
-  ORCASLICER_VERSION=$(curl -sX GET "https://api.github.com/repos/OrcaSlicer/OrcaSlicer/releases/latest" \
-    | awk '/tag_name/{print $4;exit}' FS='[""]') && \
-  RELEASE_URL=$(curl -sX GET "https://api.github.com/repos/OrcaSlicer/OrcaSlicer/releases/latest"     | awk '/url/{print $4;exit}' FS='[""]') && \
-  DOWNLOAD_URL=$(curl -sX GET "${RELEASE_URL}" | awk '/browser_download_url.*Ubuntu2404/{print $4;exit}' FS='[""]') && \
+  ARCH=$(if [ "$(uname -m)" = "x86_64" ]; then echo "x86_64"; else echo "aarch64"; fi) && \
+  DOWNLOAD_URL=$(curl -sX GET "https://api.github.com/repos/OrcaSlicer/OrcaSlicer/releases/latest" | jq -r --arg arch "$ARCH" '
+    .assets[] | select(.name | test("Ubuntu2404") and (if $arch == "aarch64" then test("aarch64") else test("aarch64") | not end)) | .browser_download_url
+  ' | head -n1) && \
   curl -o \
     /tmp/orcaslicer.app -L \
     "${DOWNLOAD_URL}" && \

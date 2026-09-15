@@ -8,11 +8,11 @@ RUN \
   apt-get update && \
   apt-get install -y \
     libgpg-error0 && \
-  FLYCAST_VERSION=$(curl -sX GET "https://api.github.com/repos/flyinghead/flycast/releases/latest" \
-    | awk '/tag_name/{print $4;exit}' FS='[""]') && \
+  DOWNLOAD_URL=$(curl -sX GET "https://api.github.com/repos/flyinghead/flycast/releases/latest" \
+    | jq -r '.assets[] | select(.name | endswith(".AppImage") and contains("x86_64")).browser_download_url' | head -n1) && \
   curl -o \
     /tmp/flycast.app -L \
-    "https://github.com/flyinghead/flycast/releases/download/${FLYCAST_VERSION}/flycast-x86_64.AppImage" && \
+    "${DOWNLOAD_URL}" && \
   chmod +x /tmp/flycast.app && \
   cd /tmp && \
   ./flycast.app --appimage-extract && \

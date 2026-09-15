@@ -24,13 +24,14 @@ RUN \
   apt-get install -y \
     /tmp/joplin.deb && \
   echo "**** customize desktop file ****" && \
+  DESKTOP_FILE=$(ls /usr/share/applications/*joplin*.desktop | head -n1) && \
   sed -i \
     -e "/^Exec=/c Exec=/bin/sh -c \"\$HOME\/.local\/bin\/proot-apps run ghcr.io/${REPO}:joplin %U\"" \
     -e "s/Name=Joplin/Name=Joplin PA/g" \
     -e '/^TryExec=/d' \
-    /usr/share/applications/joplin.desktop && \
+    "${DESKTOP_FILE}" && \
   mv \
-    /usr/share/applications/joplin.desktop \
+    "${DESKTOP_FILE}" \
     /usr/share/applications/joplin-pa.desktop && \
   echo "**** set bin name ****" && \
   echo "joplin-pa" > /bin-name && \

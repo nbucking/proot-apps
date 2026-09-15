@@ -362,6 +362,7 @@ include:
     arch: linux/amd64,linux/arm64
     icon: ryujinx.svg
     description: "Ryujinx is an open-source Nintendo Switch emulator."
+    disabled: True
   - name: shortwave
     full_name: Shortwave
     arch: linux/amd64,linux/arm64
