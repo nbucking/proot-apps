@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: write
+  packages: read
 jobs:
   meta:
     name: Ingest Metadata
@@ -28,9 +29,13 @@ jobs:
     needs: meta
     steps:
       - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
         with:
-          token: ${{ secrets.PAT }}
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - run: bash ci-scripts/update-packages.sh ${{ matrix.name }}
+        continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: success() || failure()
         with:
@@ -48,14 +53,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.PAT || github.token }}
       - uses: actions/download-artifact@v4
         with:
           path: artifacts
-      - run: rsync -av artifacts/* apps/
+      - run: |
+          if [ -d artifacts ] && [ "$(ls -A artifacts)" ]; then
+            rsync -av artifacts/* apps/
+          fi
       - run: |
           git config --global user.name 'Package Bot'
           git config --global user.email 'package-bot@users.noreply.github.com'
-          cd apps
-          git add .
-          git diff --quiet HEAD || git commit -m "Bot Updating Package Versions" && git push origin master
+          git add apps/
+          if ! git diff --quiet HEAD; then
+            git commit -m "Bot Updating Package Versions"
+            git push origin master
+          fi
