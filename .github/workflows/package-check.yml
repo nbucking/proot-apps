@@ -35,7 +35,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: bash ci-scripts/update-packages.sh ${{ matrix.name }}
-        continue-on-error: true
       - uses: actions/upload-artifact@v7
         if: success() || failure()
         with:

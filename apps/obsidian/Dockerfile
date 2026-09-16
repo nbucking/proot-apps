@@ -14,14 +14,7 @@ RUN \
     libatk-bridge2.0 \
     libnss3 \
     python3-xdg && \
-  URL=$(curl -sX GET "https://api.github.com/repos/obsidianmd/obsidian-releases/releases" | jq -r --arg arch "$(if [ "$(uname -m)" = "x86_64" ]; then echo "x86_64"; else echo "arm64"; fi)" '
-    [ .[] | .assets[] | select(.name | endswith(".AppImage")) ] |
-    if $arch == "x86_64" then
-      [ .[] | select(.name | test("arm64") | not) ]
-    else
-      [ .[] | select(.name | test("arm64")) ]
-    end | .[0].browser_download_url
-  ') && \
+  URL=$(curl -sX GET "https://api.github.com/repos/obsidianmd/obsidian-releases/releases" | jq -r --arg arch "$(if [ "$(uname -m)" = "x86_64" ]; then echo "x86_64"; else echo "arm64"; fi)" '[ .[] | .assets[] | select(.name | endswith(".AppImage")) ] | if $arch == "x86_64" then [ .[] | select(.name | test("arm64") | not) ] else [ .[] | select(.name | test("arm64")) ] end | .[0].browser_download_url') && \
   curl -o \
     /tmp/obsidian.app -L \
     "${URL}" && \
