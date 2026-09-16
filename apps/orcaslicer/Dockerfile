@@ -40,13 +40,14 @@ RUN \
   ./orcaslicer.app --appimage-extract && \
   mv squashfs-root /opt/orcaslicer && \
   echo "**** customize desktop file ****" && \
+  DESKTOP_FILE=$(ls /opt/orcaslicer/*orcaslicer*.desktop /opt/orcaslicer/*OrcaSlicer*.desktop 2>/dev/null | head -n1) && \
   sed -i \
     -e "/^Exec=/c Exec=/bin/sh -c \"\$HOME\/.local\/bin\/proot-apps run ghcr.io/${REPO}:orcaslicer %U\"" \
     -e "s/Name=OrcaSlicer/Name=OrcaSlicer PA/g" \
     -e '/^TryExec=/d' \
-    /opt/orcaslicer/OrcaSlicer.desktop && \
+    "${DESKTOP_FILE}" && \
   mv \
-    /opt/orcaslicer/OrcaSlicer.desktop \
+    "${DESKTOP_FILE}" \
     /usr/share/applications/orcaslicer-pa.desktop && \
   echo "**** set bin name ****" && \
   echo "orcaslicer-pa" > /bin-name && \
