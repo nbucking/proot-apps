@@ -39,7 +39,7 @@ hicolor-icon-theme              0.18-2                                deb
 hostname                        3.25                                  deb     
 init-system-helpers             1.69~deb13u1                          deb     
 iso-codes                       4.18.0-1                              deb     
-joplin                          3.7.18                                deb     
+joplin                          3.7.21                                deb     
 keyboard-configuration          1.242~deb13u1                         deb     
 keytar                          7.9.0                                 npm     
 libabsl20240722                 20240722.0-4                          deb     
