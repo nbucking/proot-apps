@@ -6,11 +6,12 @@ ARG REPO
 RUN \
   echo "**** install packages ****" && \
   apt-get update && \
-  SPOTUBE_VERSION=$(curl -sX GET "https://api.github.com/repos/KRTirtho/spotube/releases/latest" \
+  SPOTUBE_VERSION=$(curl -sL "https://api.github.com/repos/team-spotube/spotube/releases/latest" \
   | awk '/tag_name/{print $4;exit}' FS='[""]') && \
+  ARCH=$(uname -m) && \
   curl -o \
     /tmp/spotube.deb -L \
-    "https://github.com/KRTirtho/spotube/releases/download/${SPOTUBE_VERSION}/Spotube-linux-x86_64.deb" && \
+    "https://github.com/team-spotube/spotube/releases/download/${SPOTUBE_VERSION}/Spotube-linux-${ARCH}.deb" && \
   apt install -y --no-install-recommends \
     /tmp/spotube.deb && \
   echo "**** customize desktop file ****" && \
