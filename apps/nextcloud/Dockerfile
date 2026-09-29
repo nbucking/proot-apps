@@ -19,7 +19,7 @@ RUN \
   ./nextcloud.app --appimage-extract && \
   mv squashfs-root /opt/nextcloud && \
   echo "**** customize desktop file ****" && \
-  DFILE=/opt/nextcloud/com.nextcloud.desktopclient.nextcloud.desktop && \
+  DFILE=$(ls /opt/nextcloud/*.desktop | head -n1) && \
   DEST=/usr/share/applications/nextcloud-pa.desktop && \
   DKEEP=$(cat "${DFILE}" |sed '/^\(\Icon=\|Terminal=\|MimeType=\|Categories=\|Type=\|StartupNotify=\)/!d' |awk '!a[$0]++') && \
   echo '[Desktop Entry]' > "${DEST}" && \
