@@ -14,7 +14,10 @@ RUN \
   curl -o \
     /tmp/vscode.deb -L \
     "https://packages.microsoft.com/repos/code/pool/main/c/code/$(curl -sL https://packages.microsoft.com/repos/code/pool/main/c/code/ | grep href | grep ${ARCH} | grep -o 'code_[^"]*\.deb' | sort -V | tail -1)" && \
-  apt install -y --no-install-recommends \
+  dpkg-deb -R /tmp/vscode.deb /tmp/vscode-deb && \
+  sed -i -E 's/libasound2 \([^)]+\)/libasound2t64/g; s/libatk1.0-0 \([^)]+\)/libatk1.0-0t64/g; s/libatspi2.0-0 \([^)]+\)/libatspi2.0-0t64/g; s/libcups2 \([^)]+\)/libcups2t64/g' /tmp/vscode-deb/DEBIAN/control && \
+  dpkg-deb -b /tmp/vscode-deb /tmp/vscode.deb && \
+  apt-get install -y --no-install-recommends \
     /tmp/vscode.deb && \
   echo "**** customize desktop file ****" && \
   sed -i \
