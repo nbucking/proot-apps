@@ -1,6 +1,6 @@
 #!/bin/bash
 # Zap PA entrypoint wrapper
-export WGPU_BACKEND="${WGPU_BACKEND:-gl}"
+export WGPU_BACKEND="${WGPU_BACKEND:-auto}"
 export MESA_GL_VERSION_OVERRIDE="${MESA_GL_VERSION_OVERRIDE:-3.3}"
 export NO_AT_BRIDGE=1
 
@@ -9,12 +9,5 @@ cd /opt/zap || exit 1
 if [ "$#" -gt 0 ]; then
   exec ./zap-oss "$@"
 else
-  export PATH="/opt/zap:$PATH"
-  echo "========================================================"
-  echo "  Zap Local-First Agentic Terminal (Kowalski Workstation)"
-  echo "========================================================"
-  echo ""
-  echo "Type 'zap-oss --help' or 'zap-oss agent run --prompt \"...\"' to get started."
-  echo ""
-  exec /bin/bash
+  exec ./zap-oss
 fi
