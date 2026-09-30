@@ -20,13 +20,14 @@ RUN \
   apt-get install -y --no-install-recommends \
     /tmp/vscode.deb && \
   echo "**** customize desktop file ****" && \
+  DFILE=$(ls /usr/share/applications/com.microsoft.VSCode.desktop /usr/share/applications/code.desktop 2>/dev/null | head -n1) && \
   sed -i \
     -e "/^Exec=/c Exec=/bin/sh -c \"\$HOME\/.local\/bin\/proot-apps run ghcr.io/${REPO}:vscode %U\"" \
     -e "s/Name=Visual Studio Code/Name=VSCode PA/g" \
     -e '/^TryExec=/d' \
-    /usr/share/applications/code.desktop && \
+    "${DFILE}" && \
   mv \
-    /usr/share/applications/code.desktop \
+    "${DFILE}" \
     /usr/share/applications/vscode-pa.desktop && \
   echo "**** set bin name ****" && \
   echo "vscode-pa" > /bin-name && \
