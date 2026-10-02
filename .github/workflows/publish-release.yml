@@ -10,24 +10,17 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@v7
-    - uses: docker/setup-qemu-action@v3
-    - uses: docker/setup-buildx-action@v3
+    - uses: docker/setup-qemu-action@v4
+    - uses: docker/setup-buildx-action@v4
+    - run: bash ci-scripts/create-releases.sh
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v3
       with:
         tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        name: Release ${{ github.ref }}
         body_path: release-notes/current
         draft: false
         prerelease: false
-    - run: bash ci-scripts/create-releases.sh
-    - uses: svenstaro/upload-release-action@v2
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: proot-apps-*
-        tag: ${{ github.ref }}
-        overwrite: true
-        file_glob: true
+        files: proot-apps-*
+        token: ${{ secrets.GITHUB_TOKEN }}
