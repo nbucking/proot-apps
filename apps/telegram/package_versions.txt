@@ -325,7 +325,7 @@ p11-kit                                   0.26.2-r0                apk
 pango                                     1.56.4-r0                apk                         
 paste                                     1.0.15                   rust-crate                  
 pastey                                    0.1.0                    rust-crate                  
-pcre2                                     10.48-r0                 apk                         
+pcre2                                     10.49-r0                 apk                         
 pipewire-libs                             1.4.9-r5                 apk                         
 pixman                                    0.46.4-r0                apk                         
 pkgconf                                   2.5.1-r0                 apk                         
@@ -337,10 +337,10 @@ protoc                                    31.1-r1                  apk
 pulseaudio                                17.0-r5                  apk                         
 pulseaudio-alsa                           17.0-r5                  apk                         
 pulseaudio-lang                           17.0-r5                  apk                         
-pyc                                       3.12.14-r0               apk                         
-python3                                   3.12.14-r0               apk                         
-python3-pyc                               3.12.14-r0               apk                         
-python3-pycache-pyc0                      3.12.14-r0               apk                         
+pyc                                       3.12.15-r0               apk                         
+python3                                   3.12.15-r0               apk                         
+python3-pyc                               3.12.15-r0               apk                         
+python3-pycache-pyc0                      3.12.15-r0               apk                         
 qt6-qtbase                                6.10.3-r0                apk                         
 qt6-qtbase-x11                            6.10.3-r0                apk                         
 qt6-qtdeclarative                         6.10.3-r0                apk                         

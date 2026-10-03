@@ -257,7 +257,7 @@ p11-kit                          0.26.2-r0                apk
 packaging                        24.2                     python        
 packaging                        25.0                     python        
 pango                            1.56.4-r0                apk           
-pcre2                            10.48-r0                 apk           
+pcre2                            10.49-r0                 apk           
 pillow                           11.3.0                   python        
 pipewire-libs                    1.4.9-r5                 apk           
 pixman                           0.46.4-r0                apk           
@@ -339,7 +339,7 @@ py3-zope-interface               7.2-r0                   apk
 py3-zope-interface-pyc           7.2-r0                   apk           
 pyasn1                           0.6.1                    python        
 pyasn1-modules                   0.4.2                    python        
-pyc                              3.12.14-r0               apk           
+pyc                              3.12.15-r0               apk           
 pycairo                          1.28.0                   python        
 pycparser                        2.22                     python        
 pygobject                        3.54.5                   python        
@@ -347,9 +347,9 @@ pyhamcrest                       2.1.0                    python
 pyopenssl                        26.1.0                   python        
 pyparsing                        3.2.5                    python        
 pyserial                         3.5                      python        
-python3                          3.12.14-r0               apk           
-python3-pyc                      3.12.14-r0               apk           
-python3-pycache-pyc0             3.12.14-r0               apk           
+python3                          3.12.15-r0               apk           
+python3-pyc                      3.12.15-r0               apk           
+python3-pycache-pyc0             3.12.15-r0               apk           
 pyxdg                            0.28                     python        
 qt6-qtbase                       6.10.3-r0                apk           
 qt6-qtbase-x11                   6.10.3-r0                apk           

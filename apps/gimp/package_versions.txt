@@ -270,7 +270,7 @@ p11-kit                         0.26.2-r0                apk
 pango                           1.56.4-r0                apk           
 paste                           1.0.15                   rust-crate    
 pastey                          0.1.0                    rust-crate    
-pcre2                           10.48-r0                 apk           
+pcre2                           10.49-r0                 apk           
 pixman                          0.46.4-r0                apk           
 pkgconf                         2.5.1-r0                 apk           
 poppler                         25.12.0-r0               apk           
@@ -283,11 +283,11 @@ pulseaudio-alsa                 17.0-r5                  apk
 pulseaudio-lang                 17.0-r5                  apk           
 py3-gobject3                    3.54.5-r0                apk           
 py3-gobject3-pyc                3.54.5-r0                apk           
-pyc                             3.12.14-r0               apk           
+pyc                             3.12.15-r0               apk           
 pygobject                       3.54.5                   python        
-python3                         3.12.14-r0               apk           
-python3-pyc                     3.12.14-r0               apk           
-python3-pycache-pyc0            3.12.14-r0               apk           
+python3                         3.12.15-r0               apk           
+python3-pyc                     3.12.15-r0               apk           
+python3-pycache-pyc0            3.12.15-r0               apk           
 quote                           1.0.40                   rust-crate    
 rand                            0.9.1                    rust-crate    
 rand_chacha                     0.9.0                    rust-crate    
