@@ -81,11 +81,11 @@ espeak-ng                  1.52.0-r1                apk
 eudev-libs                 3.2.14-r8                apk                         
 feedparser                 6.0.14                   python                      
 fern                       0.7.1                    rust-crate                  
-ffmpeg-libavcodec          8.1.2-r1                 apk                         
-ffmpeg-libavformat         8.1.2-r1                 apk                         
-ffmpeg-libavutil           8.1.2-r1                 apk                         
-ffmpeg-libswresample       8.1.2-r1                 apk                         
-ffmpeg-libswscale          8.1.2-r1                 apk                         
+ffmpeg-libavcodec          8.1.2-r2                 apk                         
+ffmpeg-libavformat         8.1.2-r2                 apk                         
+ffmpeg-libavutil           8.1.2-r2                 apk                         
+ffmpeg-libswresample       8.1.2-r2                 apk                         
+ffmpeg-libswscale          8.1.2-r2                 apk                         
 fftw-single-libs           3.3.11-r0                apk                         
 file                       5.48-r0                  apk                         
 font-liberation            2.1.5-r2                 apk                         
