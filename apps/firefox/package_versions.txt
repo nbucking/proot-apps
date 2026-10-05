@@ -63,9 +63,9 @@ equator-macro              0.4.2                    rust-crate
 errno                      0.3.12                   rust-crate    
 eudev-libs                 3.2.14-r8                apk           
 fern                       0.7.1                    rust-crate    
-ffmpeg-libavcodec          8.1.2-r2                 apk           
-ffmpeg-libavutil           8.1.2-r2                 apk           
-ffmpeg-libswresample       8.1.2-r2                 apk           
+ffmpeg-libavcodec          8.1.2-r3                 apk           
+ffmpeg-libavutil           8.1.2-r3                 apk           
+ffmpeg-libswresample       8.1.2-r3                 apk           
 fftw-single-libs           3.3.11-r0                apk           
 file                       5.48-r0                  apk           
 firefox                    154.0-r0                 apk           
@@ -301,7 +301,7 @@ wayland-libs-cursor        1.26.0-r0                apk
 wayland-libs-egl           1.26.0-r0                apk           
 webrtc-audio-processing-1  1.3-r5                   apk           
 x264-libs                  0.164.3108-r1            apk           
-x265-libs                  4.1-r0                   apk           
+x265-libs                  4.2-r0                   apk           
 xcb-util                   0.4.1-r3                 apk           
 xdg-utils                  1.2.1-r1                 apk           
 xf86-video-amdgpu          23.0.0-r3                apk           
