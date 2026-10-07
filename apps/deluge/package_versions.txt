@@ -175,7 +175,7 @@ libproxy                         0.5.12-r0                apk
 libpsl                           0.21.5-r3                apk           
 libpulse                         17.0-r5                  apk           
 librsvg                          2.61.2-r0                apk           
-libseccomp                       2.6.0-r1                 apk           
+libseccomp                       2.6.1-r0                 apk           
 libsharpyuv                      1.6.0-r0                 apk           
 libsm                            1.2.6-r0                 apk           
 libsndfile                       1.2.2-r2                 apk           
@@ -385,7 +385,7 @@ twisted                          24.11.0                  python
 typeguard                        4.3.0                    python        
 typing-extensions                4.12.2                   python        
 typing-extensions                4.15.0                   python        
-tzdata                           2026d-r0                 apk           
+tzdata                           2026e-r0                 apk           
 wayland-libs-client              1.24.0-r0                apk           
 wayland-libs-cursor              1.24.0-r0                apk           
 wayland-libs-egl                 1.24.0-r0                apk           

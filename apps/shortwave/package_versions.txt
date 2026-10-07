@@ -209,7 +209,7 @@ libraw1394                      2.1.2-r5                 apk
 librist                         0.2.10-r1                apk                         
 librsvg                         2.61.2-r0                apk                         
 librtmp                         2.4_git20190330-r5       apk                         
-libseccomp                      2.6.0-r1                 apk                         
+libseccomp                      2.6.1-r0                 apk                         
 libsharpyuv                     1.6.0-r0                 apk                         
 libshout                        2.4.6-r4                 apk                         
 libshumate                      1.5.3-r0                 apk                         
@@ -378,7 +378,7 @@ thiserror                       2.0.12                   rust-crate
 tiff                            4.7.1-r0                 apk                         
 tinyvec                         1.9.0                    rust-crate                  
 tslib                           1.23-r0                  apk                         
-tzdata                          2026d-r0                 apk                         
+tzdata                          2026e-r0                 apk                         
 unicode-ident                   1.0.18                   rust-crate                  
 unicode-width                   0.2.1                    rust-crate                  
 utf8parse                       0.2.2                    rust-crate                  
