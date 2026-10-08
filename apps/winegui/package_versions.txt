@@ -290,8 +290,8 @@ libpixman-1-0                    0.42.2-1build1                     deb        (
 libpng16-16t64                   1.6.43-5ubuntu0.6                  deb        (+1 duplicate)  
 libpolkit-agent-1-0              124-2ubuntu1.24.04.4               deb                        
 libpolkit-gobject-1-0            124-2ubuntu1.24.04.4               deb                        
-libpoppler-glib8t64              24.02.0-1ubuntu9.9                 deb        (+1 duplicate)  
-libpoppler134                    24.02.0-1ubuntu9.9                 deb        (+1 duplicate)  
+libpoppler-glib8t64              24.02.0-1ubuntu9.10                deb        (+1 duplicate)  
+libpoppler134                    24.02.0-1ubuntu9.10                deb        (+1 duplicate)  
 libproc2-0                       2:4.0.4-4ubuntu3.3                 deb                        
 libproxy1v5                      0.5.4-4build1                      deb                        
 libpsl5t64                       0.21.2-1.1build1                   deb        (+1 duplicate)  
@@ -476,7 +476,7 @@ session-migration                0.3.9build1                        deb
 sgml-base                        1.31                               deb                        
 shared-mime-info                 2.4-4                              deb                        
 stdlib                           go1.22.2                           go-module                  
-sudo                             1.9.15p5-3ubuntu5.24.04.3          deb                        
+sudo                             1.9.15p5-3ubuntu5.24.04.4          deb                        
 systemd                          255.4-1ubuntu8.17                  deb                        
 systemd-dev                      255.4-1ubuntu8.17                  deb                        
 systemd-sysv                     255.4-1ubuntu8.17                  deb                        

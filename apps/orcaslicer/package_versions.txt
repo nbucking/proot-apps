@@ -473,7 +473,7 @@ libpmix2t64                       5.0.1-4.1build1                       deb
 libpng-dev                        1.6.43-5ubuntu0.6                     deb                     
 libpng16-16t64                    1.6.43-5ubuntu0.6                     deb                     
 libpocketsphinx3                  0.8.0+real5prealpha+1-15ubuntu5       deb                     
-libpoppler134                     24.02.0-1ubuntu9.9                    deb                     
+libpoppler134                     24.02.0-1ubuntu9.10                   deb                     
 libpostproc57                     7:6.1.1-3ubuntu5                      deb                     
 libpq5                            16.15-0ubuntu0.24.04.1                deb                     
 libproc2-0                        2:4.0.4-4ubuntu3.3                    deb                     
