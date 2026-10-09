@@ -274,7 +274,7 @@ openexr-libopenexr               3.4.13-r0                apk
 openexr-libopenexrcore           3.4.13-r0                apk                         
 openimagedenoise                 2.3.3-r0                 apk                         
 openimageio                      3.0.10.1-r3              apk                         
-openjpeg                         2.5.4-r1                 apk                         
+openjpeg                         2.5.4-r2                 apk                         
 openpgl                          0.7.1-r0                 apk                         
 opensubdiv                       3.6.1-r0                 apk                         
 openvdb                          12.1.1-r0                apk                         
@@ -336,7 +336,7 @@ tdb-libs                         1.4.14-r0                apk
 terminal_size                    0.4.2                    rust-crate                  
 thiserror                        1.0.69                   rust-crate                  
 thiserror                        2.0.12                   rust-crate                  
-tiff                             4.7.1-r0                 apk                         
+tiff                             4.7.2-r0                 apk                         
 tinyvec                          1.9.0                    rust-crate                  
 unicode-ident                    1.0.18                   rust-crate                  
 unicode-width                    0.2.1                    rust-crate                  

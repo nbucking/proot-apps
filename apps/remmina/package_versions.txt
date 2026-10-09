@@ -214,7 +214,7 @@ spirv-tools                1.4.321.0-r1             apk
 sqlite-libs                3.53.4-r0                apk     
 ssl_client                 1.37.0-r30               apk     
 tdb-libs                   1.4.14-r0                apk     
-tiff                       4.7.1-r0                 apk     
+tiff                       4.7.2-r0                 apk     
 vte3                       0.82.3-r1                apk     
 vte3-lang                  0.82.3-r1                apk     
 vte3-profile               0.82.3-r1                apk     
