@@ -141,7 +141,7 @@ libffi                       3.8.0-r0                 apk
 libflac                      1.5.0-r0                 apk                         
 libgcc                       15.2.0-r9                apk                         
 libgomp                      15.2.0-r9                apk                         
-libhwy                       1.4.0-r0                 apk                         
+libhwy                       1.4.0-r1                 apk                         
 libice                       1.1.2-r0                 apk                         
 libidn2                      2.3.8-r0                 apk                         
 libinput-libs                1.32.0-r0                apk                         
@@ -295,7 +295,7 @@ libxtst                      1.2.5-r0                 apk
 libxv                        1.0.13-r0                apk                         
 libxvmc                      1.0.15-r0                apk                         
 libxxf86vm                   1.1.7-r0                 apk                         
-libzip                       1.11.4-r2                apk                         
+libzip                       1.12-r0                  apk                         
 libzmq                       4.3.5-r2                 apk                         
 lilv-libs                    0.28.0-r0                apk                         
 linux-raw-sys                0.9.4                    rust-crate                  
