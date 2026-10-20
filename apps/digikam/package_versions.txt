@@ -208,6 +208,7 @@ libapk                     3.0.8-r0                 apk
 libass                     0.17.4-r0                apk                         
 libassuan                  3.0.2-r0                 apk                         
 libasyncns                 0.8-r4                   apk                         
+libatomic                  15.2.0-r2                apk                         
 libb2                      0.98.1-r3                apk                         
 libblkid                   2.41.6-r1                apk                         
 libbluray                  1.4.0-r0                 apk                         
@@ -344,11 +345,11 @@ linux-pam                  1.7.1-r2                 apk
 linux-raw-sys              0.9.4                    rust-crate                  
 llvm21-libs                21.1.2-r1                apk                         
 log                        0.4.27                   rust-crate                  
-mariadb                    11.4.12-r0               apk                         
-mariadb-client             11.4.12-r0               apk                         
-mariadb-client-perl        11.4.12-r0               apk                         
-mariadb-common             11.4.12-r0               apk                         
-mariadb-server-utils       11.4.12-r0               apk                         
+mariadb                    11.4.13-r0               apk                         
+mariadb-client             11.4.13-r0               apk                         
+mariadb-client-perl        11.4.13-r0               apk                         
+mariadb-common             11.4.13-r0               apk                         
+mariadb-server-utils       11.4.13-r0               apk                         
 maybe-rayon                0.1.1                    rust-crate                  
 mbedtls                    3.6.7-r0                 apk                         
 memchr                     2.7.5                    rust-crate                  
