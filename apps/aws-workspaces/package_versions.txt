@@ -11,7 +11,7 @@ bind9-host                      1:9.18.39-0ubuntu0.22.04.7               deb
 bind9-libs                      1:9.18.39-0ubuntu0.22.04.7               deb       
 bsdutils                        1:2.37.2-4ubuntu3.5                      deb       
 bubblewrap                      0.6.1-1ubuntu0.3                         deb       
-ca-certificates                 20260601~22.04.1                         deb       
+ca-certificates                 20260816ubuntu0.22.04.1                  deb       
 coreutils                       8.32-4.1ubuntu1.3                        deb       
 cracklib-runtime                2.9.6-3.4build4                          deb       
 curl                            7.81.0-1ubuntu1.25                       deb       
