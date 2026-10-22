@@ -242,7 +242,7 @@ libsoup3                                  3.6.5-r1                 apk
 libsoup3-lang                             3.6.5-r1                 apk           
 libsrt                                    1.5.3-r1                 apk           
 libsrtp                                   2.7.0-r0                 apk           
-libssh2                                   1.11.1-r3                apk           
+libssh2                                   1.11.1-r4                apk           
 libssl3                                   3.5.8-r0                 apk           
 libstdc++                                 15.2.0-r2                apk           
 libsz                                     1.1.4-r2                 apk           
