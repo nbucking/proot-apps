@@ -63,9 +63,9 @@ equator-macro              0.4.2                    rust-crate
 errno                      0.3.12                   rust-crate    
 eudev-libs                 3.2.14-r8                apk           
 fern                       0.7.1                    rust-crate    
-ffmpeg-libavcodec          8.1.2-r3                 apk           
-ffmpeg-libavutil           8.1.2-r3                 apk           
-ffmpeg-libswresample       8.1.2-r3                 apk           
+ffmpeg-libavcodec          9.0.2-r0                 apk           
+ffmpeg-libavutil           9.0.2-r0                 apk           
+ffmpeg-libswresample       9.0.2-r0                 apk           
 fftw-single-libs           3.3.11-r0                apk           
 file                       5.48-r0                  apk           
 firefox-developer-edition  159.0_beta3-r0           apk           
@@ -81,8 +81,8 @@ gdk-pixbuf-lang            2.44.8-r0                apk
 getrandom                  0.3.3                    rust-crate    
 glib                       2.90.0-r0                apk           
 glib-lang                  2.90.0-r0                apk           
-glycin-image-rs            2.2.4-r0                 apk           
-glycin-svg                 2.2.4-r0                 apk           
+glycin-image-rs            2.2.5-r0                 apk           
+glycin-svg                 2.2.5-r0                 apk           
 gmp                        6.3.0-r4                 apk           
 gnutls                     3.8.13-r0                apk           
 gobject-introspection      1.86.0-r2                apk           
@@ -132,7 +132,7 @@ libexpat                   2.8.5-r0                 apk
 libffi                     3.8.0-r0                 apk           
 libflac                    1.5.0-r0                 apk           
 libgcc                     15.2.0-r9                apk           
-libglycin                  2.2.4-r0                 apk           
+libglycin                  2.2.5-r0                 apk           
 libgomp                    15.2.0-r9                apk           
 libhwy                     1.4.0-r1                 apk           
 libice                     1.1.2-r0                 apk           
@@ -151,7 +151,7 @@ libpciaccess               0.19-r0                  apk
 libpng                     1.6.59-r0                apk           
 libpsl                     0.21.5-r3                apk           
 libpulse                   17.0-r7                  apk           
-librsvg                    2.63.3-r0                apk           
+librsvg                    2.63.4-r0                apk           
 libseccomp                 2.6.1-r0                 apk           
 libselinux                 3.11-r3                  apk           
 libsharpyuv                1.6.0-r0                 apk           
