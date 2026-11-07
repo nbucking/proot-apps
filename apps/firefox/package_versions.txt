@@ -109,7 +109,7 @@ lab                        0.11.0                   rust-crate
 lame-libs                  3.100-r5                 apk           
 lang                       0.1-r2                   apk           
 lcms2                      2.19.1-r0                apk           
-libSvtAv1Enc               4.2.0-r0                 apk           
+libSvtAv1Enc               4.3.0-r0                 apk           
 libapk                     3.0.7-r0                 apk           
 libasyncns                 0.8-r5                   apk           
 libatk-1.0                 2.62.1-r0                apk           
@@ -246,7 +246,7 @@ paste                      1.0.15                   rust-crate
 pastey                     0.1.0                    rust-crate    
 pciutils-libs              3.15.0-r0                apk           
 pcre2                      10.49-r0                 apk           
-pipewire-libs              1.6.9-r0                 apk           
+pipewire-libs              1.6.11-r0                apk           
 pixman                     0.46.4-r0                apk           
 pkgconf                    3.0.10-r0                apk           
 ppv-lite86                 0.2.21                   rust-crate    
