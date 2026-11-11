@@ -73,7 +73,7 @@ json-glib                  1.10.8-r0                apk
 json-glib-lang             1.10.8-r0                apk     
 keyutils-libs              1.6.3-r4                 apk     
 krb5-conf                  1.0-r2                   apk     
-krb5-libs                  1.22.1-r0                apk     
+krb5-libs                  1.22.3-r0                apk     
 lame-libs                  3.100-r5                 apk     
 lang                       0.1-r2                   apk     
 libapk                     3.0.8-r0                 apk     
