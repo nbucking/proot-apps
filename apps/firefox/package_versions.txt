@@ -98,8 +98,8 @@ gtk+3.0-lang               3.24.52-r0               apk
 harfbuzz                   14.2.1-r0                apk           
 heck                       0.5.0                    rust-crate    
 hwdata-pci                 0.411-r0                 apk           
-icu-data-en                78.1-r0                  apk           
-icu-libs                   78.1-r0                  apk           
+icu-data-en                78.3-r0                  apk           
+icu-libs                   78.3-r0                  apk           
 interpolate_name           0.2.4                    rust-crate    
 is_terminal_polyfill       1.70.1                   rust-crate    
 itertools                  0.10.5                   rust-crate    
@@ -121,7 +121,7 @@ libc                       0.2.172                  rust-crate
 libcap2                    2.78-r0                  apk           
 libcrypto3                 3.5.7-r0                 apk           
 libcurl                    8.22.0-r0                apk           
-libdav1d                   1.5.4-r0                 apk           
+libdav1d                   1.5.5-r0                 apk           
 libdisplay-info            0.3.0-r1                 apk           
 libdrm                     2.4.134-r0               apk           
 libeconf                   0.8.4-r0                 apk           

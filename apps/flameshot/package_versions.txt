@@ -49,8 +49,8 @@ gstreamer-ptp-helper       1.28.5-r1                apk
 harfbuzz                   14.2.1-r0                apk     
 hicolor-icon-theme         0.18-r0                  apk     
 hwdata-pci                 0.411-r0                 apk     
-icu-data-en                78.1-r0                  apk     
-icu-libs                   78.1-r0                  apk     
+icu-data-en                78.3-r0                  apk     
+icu-libs                   78.3-r0                  apk     
 kdsingleapplication        1.1.0-r0                 apk     
 kguiaddons                 6.32.0-r0                apk     
 lame-libs                  3.100-r5                 apk     
