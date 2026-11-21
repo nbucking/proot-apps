@@ -68,7 +68,7 @@ ffmpeg-libavutil           9.0.2-r3                 apk
 ffmpeg-libswresample       9.0.2-r3                 apk           
 fftw-single-libs           3.3.11-r0                apk           
 file                       5.48-r0                  apk           
-firefox                    160.0-r0                 apk           
+firefox                    160.0.1-r0               apk           
 font-noto                  2026.10.01-r0            apk           
 font-noto-common           2026.10.01-r0            apk           
 font-noto-math             2026.10.01-r0            apk           
