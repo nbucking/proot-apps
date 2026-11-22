@@ -310,7 +310,7 @@ libxv                                     1.0.13-r0                apk
 libxvmc                                   1.0.15-r0                apk                         
 libxxf86vm                                1.1.7-r0                 apk                         
 libxxhash                                 0.8.3-r1                 apk                         
-libyuv                                    0.0.1928-r0              apk                         
+libyuv                                    0.0.1985-r0              apk                         
 libzmq                                    4.3.5-r2                 apk                         
 linux-raw-sys                             0.9.4                    rust-crate                  
 llvm23-libs                               23.1.2-r0                apk                         

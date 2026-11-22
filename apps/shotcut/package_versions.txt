@@ -217,7 +217,7 @@ liblz4-1                             1.10.0-4                              deb
 liblzma5                             5.8.1-1+deb13u1                       deb     
 libmagic-mgc                         1:5.46-5                              deb     
 libmagic1t64                         1:5.46-5                              deb     
-libmariadb3                          1:11.8.6-0+deb13u1                    deb     
+libmariadb3                          1:11.8.9+ds-0+deb13u1                 deb     
 libmbedcrypto16                      3.6.6-0.1~deb13u1                     deb     
 libmd0                               1.1.0-2+b1                            deb     
 libmd4c0                             0.5.2-2+b1                            deb     
@@ -493,7 +493,7 @@ libzvbi0t64                          0.2.44-1                              deb
 locales-all                          2.41-12+deb13u4                       deb     
 login                                1:4.16.0-2+really2.41.5-0+deb13u1     deb     
 login.defs                           1:4.17.4-2                            deb     
-mariadb-common                       1:11.8.6-0+deb13u1                    deb     
+mariadb-common                       1:11.8.9+ds-0+deb13u1                 deb     
 mawk                                 1.3.4.20250131-1                      deb     
 melt                                 7.30.0-1+b2                           deb     
 mesa-libgallium                      25.0.7-2+deb13u1                      deb     

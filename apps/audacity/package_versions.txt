@@ -90,11 +90,11 @@ libbrotli1                      1.1.0-2+b7                            deb
 libbs2b0                        3.1.0+dfsg-8+b1                       deb       
 libbsd0                         0.12.2-2                              deb       
 libbz2-1.0                      1.0.8-6                               deb       
-libc-bin                        2.41-12+deb13u4                       deb       
-libc-dev-bin                    2.41-12+deb13u4                       deb       
-libc-l10n                       2.41-12+deb13u4                       deb       
-libc6                           2.41-12+deb13u4                       deb       
-libc6-dev                       2.41-12+deb13u4                       deb       
+libc-bin                        2.41-12+deb13u5                       deb       
+libc-dev-bin                    2.41-12+deb13u5                       deb       
+libc-l10n                       2.41-12+deb13u5                       deb       
+libc6                           2.41-12+deb13u5                       deb       
+libc6-dev                       2.41-12+deb13u5                       deb       
 libcaca0                        0.99.beta20-5+deb13u1                 deb       
 libcairo-gobject2               1.18.4-1+b1                           deb       
 libcairo2                       1.18.4-1+b1                           deb       
@@ -409,7 +409,7 @@ libzvbi-common                  0.2.44-1                              deb
 libzvbi0t64                     0.2.44-1                              deb       
 linux-libc-dev                  6.12.117-1                            deb       
 linux-sysctl-defaults           4.12.1                                deb       
-locales-all                     2.41-12+deb13u4                       deb       
+locales-all                     2.41-12+deb13u5                       deb       
 login                           1:4.16.0-2+really2.41.5-0+deb13u1     deb       
 login.defs                      1:4.17.4-2                            deb       
 manpages                        6.9.1-1                               deb       
