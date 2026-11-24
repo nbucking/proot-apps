@@ -187,7 +187,7 @@ libevdev                                  1.13.6-r0                apk
 libexpat                                  2.8.5-r0                 apk                         
 libffi                                    3.5.2-r0                 apk                         
 libflac                                   1.4.3-r2                 apk                         
-libfontenc                                1.1.8-r0                 apk                         
+libfontenc                                1.1.10-r0                apk                         
 libgcc                                    15.2.0-r2                apk                         
 libgomp                                   15.2.0-r2                apk                         
 libheif                                   1.23.0-r0                apk                         
