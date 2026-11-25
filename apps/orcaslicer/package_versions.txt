@@ -489,8 +489,8 @@ libharfbuzz0b                     8.3.0-2build2                                 
 libhdf4-0-alt                     4.2.16-4build1                                           deb                          
 libhdf5-103-1t64                  1.10.10+repack-3.1ubuntu4                                deb                          
 libhdf5-hl-100t64                 1.10.10+repack-3.1ubuntu4                                deb                          
-libheif-plugin-aomdec             1.17.6-1ubuntu4.9                                        deb                          
-libheif1                          1.17.6-1ubuntu4.9                                        deb                          
+libheif-plugin-aomdec             1.17.6-1ubuntu4.10                                       deb                          
+libheif1                          1.17.6-1ubuntu4.10                                       deb                          
 libhogweed6t64                    3.9.1-2.2build1.1                                        deb                          
 libhsa-runtime64-1                5.7.1-2build1                                            deb                          
 libhsakmt1                        5.7.0-1build1                                            deb                          
