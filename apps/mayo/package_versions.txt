@@ -367,7 +367,7 @@ libxext6                            2:1.3.4-1build2                     deb
 libxfixes3                          1:6.0.0-2build1                     deb                     
 libxfont2                           1:2.0.6-1+deb13u1build0.24.04.2     deb                     
 libxft2                             2.3.6-1build1                       deb                     
-libxi6                              2:1.8.1-1build1                     deb                     
+libxi6                              2:1.8.1-1ubuntu0.1                  deb                     
 libxinerama1                        2:1.1.4-3build1                     deb                     
 libxkbcommon-x11-0                  1.6.0-1build1                       deb                     
 libxkbcommon0                       1.6.0-1build1                       deb                     
@@ -431,7 +431,7 @@ python3-dbus                        1.3.2-5build3                       deb
 python3-distro                      1.9.0-1                             deb                     
 python3-gi                          3.48.2-1                            deb                     
 python3-httplib2                    0.20.4-3ubuntu0.1                   deb                     
-python3-jwt                         2.7.0-1ubuntu0.5                    deb                     
+python3-jwt                         2.7.0-1ubuntu0.6                    deb                     
 python3-launchpadlib                1.11.0-6                            deb                     
 python3-lazr.restfulclient          0.14.6-1                            deb                     
 python3-lazr.uri                    1.0.6-3                             deb                     
